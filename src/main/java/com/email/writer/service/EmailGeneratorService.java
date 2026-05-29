@@ -16,8 +16,8 @@ public class EmailGeneratorService {
     private final String apiKey;
 
     public EmailGeneratorService(WebClient.Builder webClientBuilder, 
-                                 @Value("${gemini.api.url}") String baseUrl,
-                                 @Value("${gemini.api.key}") String geminiApiKey
+                                 @Value("${GEMINI_API_URL}") String baseUrl,
+                                 @Value("${GEMINI_API_KEY}") String geminiApiKey
     ) {
         this.webClient = webClientBuilder.baseUrl(baseUrl).build();
         this.apiKey = geminiApiKey;
